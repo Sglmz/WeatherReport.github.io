@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00, #00ff7f, #00ffff, #007fff, #0000ff, #7f00ff, #ff00ff, #ff007f);
+    background-size: 300% 300%;
+    animation: rainbowBackground 10s ease infinite;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@keyframes rainbowBackground {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #000000;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#weather {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#weather p {
+    font-style: italic;
+    margin: 0;
+}
+
+#music {
+    margin: 30px 0;
+}
+
+#music p {
+    font-size: 1.2rem;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+#song-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+button {
+    background-color: #575757;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #ff4f4f;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #ff007f;
+}
+
+audio {
+    margin-top: 30px;
+    width: 100%;
+}
