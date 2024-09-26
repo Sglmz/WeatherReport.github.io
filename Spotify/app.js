@@ -32,9 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function displayWeather(data) {
+        const city = data.name; // Nombre de la ciudad
         const temp = data.main.temp.toFixed(1);
         const description = data.weather[0].description.toLowerCase();
-        weatherElement.innerHTML = `<p>Tu clima: ${description}, ${temp}°C</p>`;
+        weatherElement.innerHTML = `<p>Clima en ${city}: ${description}, ${temp}°C</p>`;
 
         recommendMusic(description);
     }
