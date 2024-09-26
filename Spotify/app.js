@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function displayWeather(data) {
-        const city = data.name; // Nombre de la ciudad
+        const city = data.name; 
         const temp = data.main.temp.toFixed(1);
         const description = data.weather[0].description.toLowerCase();
         weatherElement.innerHTML = `<p>Clima en ${city}: ${description}, ${temp}°C</p>`;
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let song1 = "";
         let song2 = "";
 
-        if (description.includes("lluvia") || description.includes("nublado")) {
+        if (description.includes("lluvia") || description.includes("nublado") || description.includes("nuboso")) {
             song1 = "lluvia1.mp3";
             song2 = "lluvia2.mp3";
         } else if (description.includes("soleado") || description.includes("despejado") || description.includes("nubes") || description.includes("claro")) {
@@ -67,10 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function showError(error) {
         switch(error.code) {
             case error.PERMISSION_DENIED:
-                weatherElement.innerHTML = "<p>Usuario negó la solicitud de geolocalización.</p>";
+                weatherElement.innerHTML = "<p>Se negó la solicitud de geolocalización.</p>";
                 break;
             case error.POSITION_UNAVAILABLE:
-                weatherElement.innerHTML = "<p>La información de ubicación no está disponible.</p>";
+                weatherElement.innerHTML = "<p>La ubicación no está disponible.</p>";
                 break;
             case error.TIMEOUT:
                 weatherElement.innerHTML = "<p>La solicitud para obtener la ubicación ha caducado.</p>";
