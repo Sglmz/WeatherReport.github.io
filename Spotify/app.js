@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let song1 = "";
         let song2 = "";
 
-        if (description.includes("lluvia") || description.includes("nublado") || description.includes("nuboso")) {
+        if (description.includes("lluvia") || description.includes("nublado") || description.includes("nuboso") || description.includes("lluvioso") || description.includes("agua")) {
             song1 = "lluvia1.mp3";
             song2 = "lluvia2.mp3";
         } else if (description.includes("soleado") || description.includes("despejado") || description.includes("nubes") || description.includes("claro")) {
